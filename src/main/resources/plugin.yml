@@ -1,0 +1,8 @@
+name: NoNameCore
+version: '${version}'
+main: com.bowfun.nonamecore.NoNameCore
+api-version: '1.21'
+prefix: No Name Core
+authors: [BowFun]
+description: A core plugin for the Not-yet-named Server.
+website: plugins.bownet.xyz
