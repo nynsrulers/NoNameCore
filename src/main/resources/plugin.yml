@@ -6,3 +6,9 @@ prefix: No Name Core
 authors: [BowFun]
 description: A core plugin for the Not-yet-named Server.
 website: plugins.bownet.xyz
+commands:
+  daycounter:
+    aliases:
+      - daycount
+      - wtime
+    description: Restores the day counter from F3 (+ bedrock support)
