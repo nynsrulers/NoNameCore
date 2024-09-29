@@ -22,6 +22,8 @@ public final class NoNameCore extends JavaPlugin implements Listener {
         CoreTools.getInstance().setPlugin(this);
         // Commands
         getCommand("daycounter").setExecutor(new DayCounterCMD(this));
+        // Tab completer
+        getCommand("daycounter").setTabCompleter(new DayCounterTabCompleter());
     }
 
     @Override
