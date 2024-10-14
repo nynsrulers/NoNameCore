@@ -8,7 +8,9 @@ Prefix: "&8[&dNo Name Core&8]"
 # Welcome Message - Sends to players after they join (3 sec delay)
 # Disable by setting the first line of the message to "DISABLED"
 # Color codes supported here, guide: https://wiki.ess3.net/mc
+# Placeholder %allplayers% for all online players
 WelcomeMessage:
   - "&8-- &dNot-yet-named Server &8--"
   - "&bJoin Proximity Chat: /voice"
   - "&9Join the Discord: /discord"
+  - "&aPlayers online: &f%allplayers%"
