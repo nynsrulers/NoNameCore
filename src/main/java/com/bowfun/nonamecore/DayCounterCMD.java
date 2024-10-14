@@ -16,11 +16,11 @@ public class DayCounterCMD implements CommandExecutor {
             sender.sendMessage(prefix + ChatColor.RED + "You don't have permission to do this!");
             return false;
         }
-        if (!(sender instanceof Player)) {
+        if (!(sender instanceof Player player)) {
             sender.sendMessage(prefix + ChatColor.RED + "This command can only be used by players!");
             return false;
         }
-        Player player = (Player) sender;
+
         World world = player.getWorld();
 
         long worldTimeInDays = (world.getFullTime() / 24000);
