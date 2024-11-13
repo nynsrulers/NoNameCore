@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ManageCMD implements CommandExecutor {
+    private NoNameCore plugin;
+    public ManageCMD(NoNameCore plugin) {
+        this.plugin = plugin;
+    }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         String prefix = CoreTools.getInstance().getPrefix();
@@ -31,7 +35,6 @@ public class ManageCMD implements CommandExecutor {
 
             boolean hasPermission = false;
 
-            // Loop through the map and check permissions
             for (Map.Entry<String, String> entry : permissionMap.entrySet()) {
                 if (sender.hasPermission(entry.getKey())) {
                     sender.sendMessage(ChatColor.AQUA + entry.getValue());
@@ -45,20 +48,23 @@ public class ManageCMD implements CommandExecutor {
             }
         }
 
+        if (args[0].equalsIgnoreCase("reload")) {
+            if (sender.hasPermission("nncore.manage.reload")) {
+                plugin.reloadConfig();
+                sender.sendMessage(prefix + ChatColor.GREEN + "Config reloaded!");
+                return true;
+            } else {
+                noPermission(sender, prefix);
+                return false;
+            }
+        }
+        sender.sendMessage(prefix + ChatColor.RED + "Incorrect usage!");
+        sender.sendMessage(ChatColor.GREEN + "To see what you can do, run /nncore check.");
         return false;
     }
 
     private void noPermission(CommandSender sender, String prefix) {
         sender.sendMessage(prefix + ChatColor.RED + "You don't have permission to do this!");
         sender.sendMessage(ChatColor.GREEN + "To see what you can do, run /nncore check.");
-    }
-
-    private boolean checkFeature(ManagementFeature feature) {
-        feature.name();
-        return false;
-    }
-
-    private enum ManagementFeature {
-        reload
     }
 }
