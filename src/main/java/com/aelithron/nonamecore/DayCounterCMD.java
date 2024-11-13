@@ -1,4 +1,4 @@
-package com.bowfun.nonamecore;
+package com.aelithron.nonamecore;
 
 import org.bukkit.ChatColor;
 import org.bukkit.World;

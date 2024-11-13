@@ -1,4 +1,4 @@
-# NoNameCore by BowFun
+# NoNameCore by Aelithron
 # A core plugin to add extras to the Not-yet-named Server.
 
 # Prefix - Starts every message sent by the plugin.
@@ -11,6 +11,11 @@ Prefix: "&8[&dNo Name Core&8]"
 # Placeholder %allplayers% for all online players
 WelcomeMessage:
   - "&8-- &dNot-yet-named Server &8--"
-  - "&bJoin Proximity Chat: /voice"
   - "&9Join the Discord: /discord"
   - "&aPlayers online: &f%allplayers%"
+
+# France Joke
+# This is an inside joke on our server.
+# Disabled by default, change the below value to true to enable.
+# If enabled, sends a message to a player when they send only the word France/French in chat.
+FranceJoke: false

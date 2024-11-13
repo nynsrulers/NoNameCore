@@ -1,14 +1,18 @@
 name: NoNameCore
 version: '${version}'
-main: com.bowfun.nonamecore.NoNameCore
+main: com.aelithron.nonamecore.NoNameCore
 api-version: '1.21'
 prefix: No Name Core
-authors: [BowFun]
+authors: [Aelithron]
 description: A core plugin for the Not-yet-named Server.
-website: plugins.bownet.xyz
 commands:
   daycounter:
     aliases:
       - daycount
       - wtime
     description: Restores the day counter from F3 (+ bedrock support)
+  nncore:
+    aliases:
+      - nnc
+      - nonamecore
+    description: Manage the No Name Core plugin.
