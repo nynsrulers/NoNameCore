@@ -1,9 +1,10 @@
-package com.bowfun.nonamecore;
+package com.aelithron.nonamecore;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -24,6 +25,7 @@ public final class NoNameCore extends JavaPlugin implements Listener {
         CoreTools.getInstance().setPlugin(this);
         // Commands
         getCommand("daycounter").setExecutor(new DayCounterCMD());
+        getCommand("nncore").setExecutor(new ManageCMD());
     }
 
     @EventHandler
@@ -49,5 +51,13 @@ public final class NoNameCore extends JavaPlugin implements Listener {
                 }
             }
         }, 60L);
+    }
+
+    @EventHandler
+    public void playerChat(AsyncPlayerChatEvent e) {
+        // France joke
+        if ((e.getMessage().equalsIgnoreCase("France") || e.getMessage().equalsIgnoreCase("French")) && (getConfig().getBoolean("FranceJoke"))) {
+            e.getPlayer().sendMessage(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "FRANCE ISN'T REAL");
+        }
     }
 }
