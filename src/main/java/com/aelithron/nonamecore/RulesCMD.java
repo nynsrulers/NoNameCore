@@ -14,7 +14,7 @@ public class RulesCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         String prefix = CoreTools.getInstance().getPrefix();
-        sender.sendMessage(prefix + ChatColor.GREEN + "&8-- &bServer Rules &8--");
+        sender.sendMessage(prefix + ChatColor.DARK_GRAY + "-- " + ChatColor.AQUA + "Server Rules" + ChatColor.DARK_GRAY + " --");
         int i = 1;
         for (String rule : plugin.getConfig().getStringList("Rules")) {
             sender.sendMessage(ChatColor.AQUA.toString() + i + ". " + ChatColor.translateAlternateColorCodes('&', rule));

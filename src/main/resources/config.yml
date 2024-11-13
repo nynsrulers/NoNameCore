@@ -19,7 +19,7 @@ WelcomeMessage:
 # Don't place bullet points or number rules, they are numbered automatically.
 # A header is also pre-filled, so do not include one.
 # Color codes supported here, guide: https://wiki.ess3.net/mc
-RulesMessage:
+Rules:
   - "No Griefing: Griefing is against the rules unless you clean it up to what it was before."
   - "No Hacking: Don't use hacked clients, x-ray, auto clickers, etc. Just don't."
   - "Limit Swearing: Don't overdo it, I don't care about some light swearing but just keep it chill."
