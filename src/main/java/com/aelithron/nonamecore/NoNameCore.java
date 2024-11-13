@@ -25,7 +25,8 @@ public final class NoNameCore extends JavaPlugin implements Listener {
         CoreTools.getInstance().setPlugin(this);
         // Commands
         getCommand("daycounter").setExecutor(new DayCounterCMD());
-        getCommand("nncore").setExecutor(new ManageCMD());
+        getCommand("nncore").setExecutor(new ManageCMD(this));
+        getCommand("rules").setExecutor(new RulesCMD(this));
     }
 
     @EventHandler

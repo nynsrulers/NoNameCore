@@ -16,3 +16,5 @@ commands:
       - nnc
       - nonamecore
     description: Manage the No Name Core plugin.
+  rules:
+    description: Lists the rules for the server.
