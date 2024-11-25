@@ -7,6 +7,7 @@ Current list, subject to change or me forgetting to change it.
 - Day counter command (`/daycounter`)
 - Simple management command (`/nncore`)
 - Rule listing command (`/rules`)
+- Book comntents copy command (`/fillbook`)
 - France Isn't Real (It's an inside joke, disabled by default)
 
 ## License
