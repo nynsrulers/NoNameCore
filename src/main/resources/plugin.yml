@@ -18,3 +18,5 @@ commands:
     description: Manage the No Name Core plugin.
   rules:
     description: Lists the rules for the server.
+  fillbook:
+    description: Allows the text of a written book to be copied to a writable book.
