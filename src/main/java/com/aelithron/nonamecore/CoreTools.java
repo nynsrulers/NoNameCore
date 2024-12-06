@@ -41,13 +41,16 @@ public class CoreTools {
                 plugin.getLogger().info("Failed to check for updates.");
                 e.printStackTrace();
             }
+            assert response != null;
             String json = response.body();
             String latestVersion = json.substring(json.indexOf("tag_name") + 11, json.indexOf('"', json.indexOf("tag_name") + 11));
             String version = "v" + plugin.getDescription().getVersion();
             if (!version.equals(latestVersion)) {
-                plugin.getLogger().info("An update is available!");
-                plugin.getLogger().info("Your version: " + version + " Latest version: " + latestVersion);
-                plugin.getLogger().info("Please update at https://github.com/aelithron/NoNameCore/releases");
+                plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () -> {
+                    plugin.getLogger().info("An update is available!");
+                    plugin.getLogger().info("Your version: " + version + " - Latest version: " + latestVersion);
+                    plugin.getLogger().info("Please update at https://github.com/aelithron/NoNameCore/releases!");
+                }, 60L);
             }
         }
     }
