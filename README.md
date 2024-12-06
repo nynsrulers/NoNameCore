@@ -6,8 +6,8 @@ Current list, subject to change or me forgetting to change it.
 - Welcome message on join
 - Day counter command (`/daycounter`)
 - Simple management command (`/nncore`)
-- Rule listing command (`/rules`)
-- Book comntents copy command (`/fillbook`)
+- Rule listing command (`/rules`, uses a book display where possible)
+- Book contents copy command (`/fillbook`)
 - France Isn't Real (It's an inside joke, disabled by default)
 
 ## License
