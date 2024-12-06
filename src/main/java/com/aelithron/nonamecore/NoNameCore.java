@@ -28,6 +28,8 @@ public final class NoNameCore extends JavaPlugin implements Listener {
         getCommand("nncore").setExecutor(new ManageCMD(this));
         getCommand("rules").setExecutor(new RulesCMD(this));
         getCommand("fillbook").setExecutor(new FillBookCMD());
+        // Update checker
+        CoreTools.getInstance().checkForUpdates();
     }
 
     @EventHandler
