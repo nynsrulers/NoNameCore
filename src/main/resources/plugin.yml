@@ -20,3 +20,5 @@ commands:
     description: Lists the rules for the server.
   fillbook:
     description: Allows the text of a written book to be copied to a writable book.
+  nuke:
+    description: Drops a nuke on the player's location (or a provided one).
