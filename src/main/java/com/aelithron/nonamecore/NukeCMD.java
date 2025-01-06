@@ -20,13 +20,15 @@ public class NukeCMD implements CommandExecutor {
             return false;
         }
         if (args.length == 0) {
-            Location nukeSpawn = new Location(player.getWorld(), player.getLocation().getX(), player.getLocation().getY() + 5, player.getLocation().getZ());
+            Location nukeSpawn = new Location(player.getWorld(), player.getLocation().getX(), player.getLocation().getY() + 10, player.getLocation().getZ());
             player.getWorld().strikeLightning(nukeSpawn);
             TNTPrimed tnt = player.getWorld().spawn(nukeSpawn, TNTPrimed.class);
-            tnt.setFuseTicks(1);
-            for (int i = 0; i < 10; i++) {
+            tnt.setFuseTicks(5);
+            tnt.setYield(20);
+            for (int i = 0; i < 20; i++) {
                 TNTPrimed nukeTNT = player.getWorld().spawn(nukeSpawn, TNTPrimed.class);
                 nukeTNT.setFuseTicks(40);
+                nukeTNT.setYield(12);
             }
             sender.sendMessage(CoreTools.getInstance().getPrefix() + ChatColor.GREEN + "Nuke has been triggered!");
             return true;
