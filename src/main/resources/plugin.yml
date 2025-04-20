@@ -1,6 +1,6 @@
 name: NoNameCore
 version: '${version}'
-main: com.aelithron.nonamecore.NoNameCore
+main: com.nynsrulers.nonamecore.NoNameCore
 api-version: '1.21'
 prefix: No Name Core
 authors: [Aelithron]

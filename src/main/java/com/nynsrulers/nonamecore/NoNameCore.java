@@ -1,4 +1,4 @@
-package com.aelithron.nonamecore;
+package com.nynsrulers.nonamecore;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -28,7 +28,6 @@ public final class NoNameCore extends JavaPlugin implements Listener {
         getCommand("nncore").setExecutor(new ManageCMD(this));
         getCommand("rules").setExecutor(new RulesCMD(this));
         getCommand("fillbook").setExecutor(new FillBookCMD());
-        getCommand("nuke").setExecutor(new NukeCMD());
         // Update checker
         CoreTools.getInstance().checkForUpdates();
     }

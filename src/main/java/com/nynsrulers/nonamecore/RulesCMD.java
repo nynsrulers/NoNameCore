@@ -1,4 +1,4 @@
-package com.aelithron.nonamecore;
+package com.nynsrulers.nonamecore;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.aelithron'
+group = 'com.nynsrulers'
 version = '1.3.0'
 
 repositories {

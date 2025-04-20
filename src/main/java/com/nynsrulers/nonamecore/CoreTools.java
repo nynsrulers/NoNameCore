@@ -1,4 +1,4 @@
-package com.aelithron.nonamecore;
+package com.nynsrulers.nonamecore;
 
 import org.bukkit.ChatColor;
 
@@ -32,7 +32,7 @@ public class CoreTools {
         if (plugin.getConfig().getBoolean("CheckForUpdates")) {
             HttpRequest check = HttpRequest.newBuilder()
                     .GET()
-                    .uri(URI.create("https://api.github.com/repos/aelithron/NoNameCore/releases/latest"))
+                    .uri(URI.create("https://api.github.com/repos/nynsrulers/NoNameCore/releases/latest"))
                     .build();
             HttpResponse<String> response = null;
             try {
@@ -49,7 +49,7 @@ public class CoreTools {
                 plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () -> {
                     plugin.getLogger().info("An update is available!");
                     plugin.getLogger().info("Your version: " + version + " - Latest version: " + latestVersion);
-                    plugin.getLogger().info("Please update at https://github.com/aelithron/NoNameCore/releases!");
+                    plugin.getLogger().info("Please update at https://github.com/nynsrulers/NoNameCore/releases!");
                 }, 60L);
             }
         }
